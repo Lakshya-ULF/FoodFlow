@@ -13,42 +13,42 @@ password_hash = PasswordHash.recommended()
 
 USERS = [
     {
-        "email": "owner1@foodflow.test",
+        "email": "owner1@foodflow.com",
         "password": "Owner123!",
         "role": UserRole.RESTAURANT_OWNER,
     },
     {
-        "email": "owner2@foodflow.test",
+        "email": "owner2@foodflow.com",
         "password": "Owner123!",
         "role": UserRole.RESTAURANT_OWNER,
     },
     {
-        "email": "owner3@foodflow.test",
+        "email": "owner3@foodflow.com",
         "password": "Owner123!",
         "role": UserRole.RESTAURANT_OWNER,
     },
     {
-        "email": "delivery1@foodflow.test",
+        "email": "delivery1@foodflow.com",
         "password": "Delivery123!",
         "role": UserRole.DELIVERY_PARTNER,
     },
     {
-        "email": "delivery2@foodflow.test",
+        "email": "delivery2@foodflow.com",
         "password": "Delivery123!",
         "role": UserRole.DELIVERY_PARTNER,
     },
     {
-        "email": "delivery3@foodflow.test",
+        "email": "delivery3@foodflow.com",
         "password": "Delivery123!",
         "role": UserRole.DELIVERY_PARTNER,
     },
     {
-        "email": "customer1@foodflow.test",
+        "email": "customer1@foodflow.com",
         "password": "Customer123!",
         "role": UserRole.CUSTOMER,
     },
     {
-        "email": "customer2@foodflow.test",
+        "email": "customer2@foodflow.com",
         "password": "Customer123!",
         "role": UserRole.CUSTOMER,
     },
@@ -143,17 +143,17 @@ def seed():
             (
                 "FoodFlow Kitchen",
                 "MG Road, Bangalore",
-                users["owner1@foodflow.test"].id,
+                users["owner1@foodflow.com"].id,
             ),
             (
                 "Spice Route",
                 "Koramangala, Bangalore",
-                users["owner2@foodflow.test"].id,
+                users["owner2@foodflow.com"].id,
             ),
             (
                 "Urban Bites",
                 "Indiranagar, Bangalore",
-                users["owner3@foodflow.test"].id,
+                users["owner3@foodflow.com"].id,
             ),
         ]
 
@@ -170,9 +170,9 @@ def seed():
         # -------------------------
 
         for email in [
-            "delivery1@foodflow.test",
-            "delivery2@foodflow.test",
-            "delivery3@foodflow.test",
+            "delivery1@foodflow.com",
+            "delivery2@foodflow.com",
+            "delivery3@foodflow.com",
         ]:
             get_or_create_delivery_partner(
                 db,
@@ -183,7 +183,7 @@ def seed():
         # 1000 benchmark restaurants
         # -------------------------
 
-        benchmark_owner_id = users["owner1@foodflow.test"].id
+        benchmark_owner_id = users["owner1@foodflow.com"].id
 
         existing_count = db.scalar(
             select(func.count())
