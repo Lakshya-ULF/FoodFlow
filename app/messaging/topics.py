@@ -1,0 +1,1 @@
+ORDER_EVENTS_TOPIC = "foodflow.order.events"
