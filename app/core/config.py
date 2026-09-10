@@ -15,6 +15,7 @@ class Settings(BaseSettings):
     redis_port: int = 6379
     redis_db: int = 0
     kafka_bootstrap_servers: str = "localhost:9092"
+    redis_url: str | None = None
     
     model_config = SettingsConfigDict(
         env_file=".env",
